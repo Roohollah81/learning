@@ -26,4 +26,5 @@ int main()
 
 
 // how to generate random lat,long coordinates / DONE
-// how to save coordinattes in csv file
+// how to save coordinattes in csv file / DONE
+// how to get argument from input
