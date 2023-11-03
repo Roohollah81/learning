@@ -6,12 +6,19 @@ int main()
 {
     int latitude;
     int longitude;
+    int countOfPoints;
+    string pathOfCsvFile;
 
-    std::ofstream myfile;
-    myfile.open ("C:\\Users\\Rasoul\\Desktop\\coordinates.csv");
+    cout << "How many points (lat,long) do you need? ";
+    cin >> countOfPoints;
+    cout << "\nWhere to save the csv file? ";
+    cin >> pathOfCsvFile;
+
+    ofstream myfile;
+    myfile.open (pathOfCsvFile);
     myfile << "latitude,longitude\n";
 
-    for(int i=1; i<=5; i++){
+    for(int i=1; i<=countOfPoints; i++){
 
         latitude = rand() % 181 + (-90);
         longitude = rand() % 361 + (-180);
@@ -21,9 +28,6 @@ int main()
     }
 
     myfile.close();
+
     return 0;
 }
-
-
-// how to generate random lat,long coordinates / DONE
-// how to save coordinattes in csv file
